@@ -5,6 +5,7 @@
  */
 package org.ISET.medigen.ui;
 import com.mysql.jdbc.PreparedStatement;
+import com.mysql.*;
 
 /**
  *
