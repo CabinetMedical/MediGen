@@ -247,9 +247,9 @@ public class RecherchePatient extends javax.swing.JFrame
 
     private void btnajouterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnajouterActionPerformed
         // TODO add your handling code here:
-        AjouterPatient a=new AjouterPatient();
+        /*AjouterPatient a=new AjouterPatient();
      a.setVisible(true);
-     dispose();       
+     dispose();     *///  
     
     }//GEN-LAST:event_btnajouterActionPerformed
 
