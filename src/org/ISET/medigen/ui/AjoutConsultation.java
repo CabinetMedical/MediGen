@@ -268,6 +268,7 @@ public abstract class AjoutConsultation extends javax.swing.JFrame implements Ac
 
         jLabel4.setText("Résultat");
 
+        jComboBox1.setForeground(new java.awt.Color(255, 0, 102));
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Maladie" }));
         jComboBox1.setName("cboMaladie"); // NOI18N
 
