@@ -1,6 +1,7 @@
 
 package org.ISET.medigen.dao;
 import java.sql.*;
+////
 public class Connecter
 {
     String urlpilote="com.mysql.jdbc.Driver";
