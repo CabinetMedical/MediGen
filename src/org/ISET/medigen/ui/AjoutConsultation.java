@@ -197,6 +197,7 @@ public abstract class AjoutConsultation extends javax.swing.JFrame implements Ac
         jTextField7.setText("                                 ");
         jTextField7.setName("txtTempe"); // NOI18N
 
+        jTextField2.setBackground(new java.awt.Color(227, 225, 225));
         jTextField2.setText("Taille");
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
