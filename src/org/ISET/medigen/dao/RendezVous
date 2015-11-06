@@ -1,0 +1,45 @@
+
+package org.ISET.medigen.dao;
+public class RendezVous {
+
+    private String nom;
+    private String date;
+    private int heure;
+    private String commentaire;
+
+    public String getNom() {
+        return nom;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public int getHeure() {
+        return heure;
+    }
+
+    public String getCommentaire() {
+        return commentaire;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public void setHeure(int heure) {
+        this.heure = heure;
+    }
+
+    public void setCommentaire(String commentaire) {
+        this.commentaire = commentaire;
+    }
+    
+    
+    
+}
+
