@@ -324,7 +324,6 @@ public class ModifierPatient extends javax.swing.JFrame {
         );
 
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Windows\\System32\\config\\systemprofile\\Documents\\NetBeansProjects\\MediGen\\image\\modifier.png")); // NOI18N
         jButton1.setText("modifier");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -333,7 +332,6 @@ public class ModifierPatient extends javax.swing.JFrame {
         });
 
         jButton2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jButton2.setIcon(new javax.swing.ImageIcon("C:\\Windows\\System32\\config\\systemprofile\\Documents\\NetBeansProjects\\MediGen\\image\\annuler.png")); // NOI18N
         jButton2.setText("annuler");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -358,8 +356,8 @@ public class ModifierPatient extends javax.swing.JFrame {
                 .addGap(22, 22, 22)
                 .addComponent(jButton1)
                 .addGap(28, 28, 28)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(60, Short.MAX_VALUE))
+                .addComponent(jButton2)
+                .addContainerGap(98, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
