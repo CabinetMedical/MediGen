@@ -34,6 +34,7 @@ public class AnnulerRDV extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/ISET/medigen/ui/Delete-icon0.png"))); // NOI18N
         jButton1.setName("btnAnnulerRDV"); // NOI18N

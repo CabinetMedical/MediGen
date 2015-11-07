@@ -21,7 +21,7 @@ public class AjoutConsultation {
         
         String stat = "SELECT nom, prenom FROM patient";
        
-            // org.ISET.medigen.ui.AjoutConsultation.jComboBox1.removeAllItems();
+            // /org.ISET.medigen.ui.AjoutConsultation.jComboBox1.removeAllItems();
            
             //Sélectionner dans la DB
            
