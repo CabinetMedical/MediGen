@@ -1,0 +1,68 @@
+
+package org.ISET.medigen.dao;
+
+import java.sql.ResultSet;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
+
+class AjouterRendezVous extends javax.swing.JFrame  {
+    Cnx conn= new Cnx();
+    Statement stm ;
+    ResultSet rs;
+    
+    public AjouterRendezVous() 
+    {
+        initComponents();
+        
+    }
+ private void BtnAjoutActionPerformed(java.awt.event.ActionEvent evt)
+ {
+     
+     String nom =txtnom.getText();
+     String date =txtdate.getText();
+     String heure =txtheure.getText();
+     String commentaire =txtcom.getText();
+      String requete = "insert into RendezVous('"+nom+"','"+date+"','"+heure+"','"+commentaire+"')";
+      try{
+         stm.executeUpdate(requete);
+         JOptionPane.showMessageDialog(null,"RDV est bien ajouter");
+         
+         txtnom.setText("");
+         txtdate.setText("");
+         txtheure.setText("");
+         txtcom.setText("");
+       
+         
+         
+         
+     }catch(Exception ex)
+     {
+         JOptionPane.showMessageDialog(null,ex.getMessage());
+     }
+     
+ }
+     
+    private void initComponents() {
+         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        pack();
+    }                      
+
+    public static void main(String args[]) {
+       
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new AjouterRendezVous().setVisible(true);
+            }
+        }}}
