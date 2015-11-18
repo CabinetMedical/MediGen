@@ -1,52 +1,35 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package org.ISET.medigen.dao;
 
+
+
+import org.ISET.medigen.dao.Cnx;
+
 import java.sql.*;
-import java.sql.Statement;
-import java.util.logging.Level;
+public abstract class AjoutConsultation {
 
-/**
- *
- * @author karama
- */
-public class AjoutConsultation {
-    
-    public static void main(String[] args) throws SQLException {
-        Statement st ;
-        Connecter cnx=new Connecter();
-        ResultSet res=null;
-        
-        String stat = "SELECT nom, prenom FROM patient";
-       
-            // /org.ISET.medigen.ui.AjoutConsultation.jComboBox1.removeAllItems();
-           
-            //Sélectionner dans la DB
-           
-            //ResultSet res = st.executeQuery(stat);
-            //Ajouter les elements 1 a 1
-            while (res.next()) {
-              //  org.ISET.medigen.ui.AjoutConsultation.jComboBox1.addItem(res.getString(0) + " " + res.getString(1));
-            }
-            res.close();
-            
-        } 
-  /* 
- 		
-		st=cnx.connect() ;
-		String req = "insert into article values ("+c.getMaladie+",'"+c.getDatconsult()+"','"+c.getProchRDV()+"','"+c.getPoid()+"','"+c.getTaille()+"','"+c.getTention()+"','"+C.getTemperature()+"','"+C.getCommentaire()+"')";
-		st.executeUpdate(req) ;
-		return req;
+	public AjoutConsultation(Consultation con) {
+		
+                                      Cnx c= new Cnx();
+                                         
+						Statement stm;
+                                        stm = c.Connexion();
+                                        try{
+						 stm.executeUpdate("INSERT INTO acc_acc VALUES(" + con.getNumDossier() + ", " + "'"+ con.getMaladie() + "', " + "'"+ con.getDateConsult() + "', " + "'"+con.getProchRDV() + "',"+"' "+con.getPoids() + "',"+ "'"+con.getTaille() + "',"+"' "+con.getTention() + "',"+ "'"+con.getTempirature() + "',"+ "'"+con.getCommentaire() + "')");
+                                        }
+					 catch (SQLException e) {
+						System.err.println("insertion echouer"+ e.getMessage());
+                                                e.printStackTrace();
+	                                }finally { try { 
 
-					
+                                                            if(stm != null) 
+                                                                 stm.close(); 
+                                                            
+                                                       } catch(SQLException e2) {
+                                                           System.err.println("Erreur lors de la fermeture des ressources : " + e2.getMessage());
+                                                                                 } 
+                                                              e2.printStackTrace(); 
+                                        } 
+        }
 
-				} 
-				catch (SQLException ex) 
-				{
-					JOptionPane.showMessageDialog(null,"erreur d'exception ");
-					ex.printStackTrace();
-				}
-			}*/
-}
+						
+	}
