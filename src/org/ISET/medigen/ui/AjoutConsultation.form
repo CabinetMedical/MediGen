@@ -166,7 +166,7 @@
     <Component class="javax.swing.JButton" name="btnAnnuler">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/org/ISET/medigen/ui/annuler.png"/>
+          <Image iconType="3" name="/org/ISET/medigen/ui/2934_64x64.png"/>
         </Property>
       </Properties>
       <Events>

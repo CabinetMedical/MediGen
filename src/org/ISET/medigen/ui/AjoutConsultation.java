@@ -4,6 +4,9 @@
  */
 package org.ISET.medigen.ui;
 
+import org.ISET.medigen.dao.Consultation;
+import org.ISET.medigen.dao.AjoutConsultationdao;
+import org.ISET.medigen.dao.RecherchePatient;
 /**
  *
  * @author karama
@@ -50,7 +53,7 @@ public class AjoutConsultation extends javax.swing.JPanel {
         txtTemp = new javax.swing.JTextField();
         txtDate = new javax.swing.JTextField();
 
-        btnAnnuler.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/ISET/medigen/ui/annuler.png"))); // NOI18N
+        btnAnnuler.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/ISET/medigen/ui/2934_64x64.png"))); // NOI18N
         btnAnnuler.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAnnulerActionPerformed(evt);
@@ -244,10 +247,17 @@ public class AjoutConsultation extends javax.swing.JPanel {
         int temp= Integer.parseInt(txtTemp.getText());
         String com=txtCommentaire.getText();
 
-//        Consultation(num,mld ,dt ,rdv , poid,taille ,ten ,temp ,com);        // TODO add your handling code here:
-
+   Consultation con=new Consultation(num,mld ,dt ,rdv , poid,taille ,ten ,temp ,com);        // TODO add your handling code here:
+   AjoutConsultationdao(con);
     }//GEN-LAST:event_btnAjouterActionPerformed
-
+  public static void main(String args[]) {
+     
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new RecherchePatient().setVisible(true);
+            }
+        });
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAjouter;
     private javax.swing.JButton btnAnnuler;
@@ -273,4 +283,8 @@ public class AjoutConsultation extends javax.swing.JPanel {
     private javax.swing.JTextField txtTemp;
     private javax.swing.JTextField txtTention;
     // End of variables declaration//GEN-END:variables
+
+    private void AjoutConsultationdao(Consultation con) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
